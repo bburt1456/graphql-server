@@ -3,9 +3,10 @@ const geneFactory = (sourceName) => ({
         gene: async (_source, { id }, { dataSources }) => {
             return dataSources[sourceName].getGene(id);
         },
-        genes: async (_source, { description, start, size }, { dataSources }) => {
+        genes: async (_source, { description, name, start, size }, { dataSources }) => {
             const args = {
                 description,
+                name,
                 start,
                 size,
             };
