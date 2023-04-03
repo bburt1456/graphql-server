@@ -17,7 +17,7 @@ type Query {
   expressionSources(description: String, start: Int, size: Int): [ExpressionSource]
 
   gene(id: ID!): Gene
-  genes(description: String, start: Int, size: Int, name: String): [Gene]
+  genes(name: String, description: String, start: Int, size: Int, name: String): [Gene]
 
   geneFamily(id: ID!): GeneFamily
   geneFamilies(description: String, start: Int, size: Int): [GeneFamily]
